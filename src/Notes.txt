@@ -1,1 +1,17 @@
-Test
+Old Way: user clicks link, browser sends request to remote server
+React Router: purpose is to circumvent above process
+Instead the router intercepts URL changes and just displays
+different components based on the new URL
+
+'History' package part of react-router
+User clicks link > calls History lib > History parses new
+URL and passes it to react-router > router decides to show 
+updated components.
+We write the code that says "Hey, Router, if the URL says X, 
+show this. If Y, show this. > Router delegates to React
+to render the new components
+
+This is the basis of an SPA (single page app).
+
+1. #121 import { BrowserRouter, Route } from 'react-roouter-dom';
+Route is the workhorse
