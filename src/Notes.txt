@@ -13,5 +13,15 @@ to render the new components
 
 This is the basis of an SPA (single page app).
 
-1. #121 import { BrowserRouter, Route } from 'react-roouter-dom';
+1.  Lesson 121 import { BrowserRouter, Route } from 'react-router-dom';
 Route is the workhorse
+
+----
+
+The main piece of state that we need in this app is
+the URL which tells us what to displays
+
+Use HashMap (key: id, value: post object) object for Posts instead of an array of objects
+This will help the lookup process
+
+
