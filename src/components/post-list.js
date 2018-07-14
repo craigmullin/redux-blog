@@ -26,7 +26,7 @@ class PostList extends Component {
       <div>
         <div className="text-xs-right">
           <Link className="btn btn-primary" to="/posts/new">
-            New Posts
+            New Post
           </Link>
         </div>
 
