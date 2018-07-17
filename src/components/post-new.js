@@ -11,17 +11,22 @@ class PostNew extends Component {
           type="text"
           {...field.input} // adds event handlers automatically
         />
-        {field.meta.error}
+        {field.meta.touched ? field.meta.error : ''}
       </div>
     );
   }
 
+  onSubmit(values){
+    console.log(values);
+  }
   
   render() {
+    const { handleSubmit } = this.props;
+
     return (
       <div>
         <h3>Create a Post!</h3>
-        <form>
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           <Field
             label="Title"
             name="title"
@@ -37,6 +42,7 @@ class PostNew extends Component {
             name="post"
             component={this.renderField} >
           </Field>
+          <button type="submit" className="btn ntn-primary">Submit</button>
         </form>
       </div>
     );
