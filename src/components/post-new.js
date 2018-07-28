@@ -52,7 +52,7 @@ class PostNew extends Component {
           </Field>
           <Field
             label="Post"
-            name="post"
+            name="content"
             component={this.renderField} >
           </Field>
           <button type="submit" className="btn ntn-primary">Submit</button>
@@ -74,8 +74,8 @@ function validate(values) {
   if (!values.categories){
     errors.categories = "Enter a category!";
   }
-  if (!values.post){
-    errors.post = "Enter a post!";
+  if (!values.content){
+    errors.content = "Enter a post!";
   }
   return errors; 
   // if empty object is returned, the form is good
